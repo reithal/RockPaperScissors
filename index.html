@@ -19,10 +19,14 @@
       var score = 0;
       alert("Welcome to Rock, Paper, Scissors! You will have 10 rounds to play. Good Luck!")
 
+      // Game requires to be played 10 times.
       for ( var i = 0; i < 10; i++){
 
-      userChoice = prompt("Please enter your choice: (r) for Rock, (p) for Paper, (s) for Scissors. What did you choose?");
-      cpuChoice = rpsChoices[(Math.floor(Math.random()*3))];  
+      userChoice = prompt("Please enter your choice: (r) for Rock, (p) for Paper, (s) for Scissors. What do you choose?");
+
+      // Generate a random number to use as the index of the array.
+      cpuChoice = rpsChoices[(Math.floor(Math.random()*rpsChoices.length))];
+      // Debugging to view in console.
       console.log("I chose " + cpuChoice + "User chose " + userChoice);
       
       if (!userChoice)
@@ -48,7 +52,7 @@
           }
           else 
           {
-            alert("Invalid entry. Sorry you lose this round.");
+            alert("Invalid choice. Sorry you lose this round.");
           }
         }
       
@@ -69,7 +73,7 @@
           }
           else 
           {
-            alert("Invalid entry. Sorry you lose this round.");
+            alert("Invalid choice. Sorry you lose this round.");
           }
         }
 
@@ -90,7 +94,7 @@
           }
           else 
           {
-            alert("Invalid entry. Sorry you lose this round.");
+            alert("Invalid choice. Sorry you lose this round.");
           }
         }
 
