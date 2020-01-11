@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <h1>Welcome to Rock, Paper, Scissors!</h1>
+    <h3>There is a total of 10 rounds per game.</h3>
+    <img src="Images/9-RPS-example.png">
+    
+
+    <script type="text/javascript">
+      var userChoice = "";
+      var rpsChoices = ["rock", "paper", "scissors"];
+      var cpuChoice = "";
+      var score = 0;
+      alert("Welcome to Rock, Paper, Scissors! You will have 10 rounds to play. Good Luck!")
+
+      for ( var i = 0; i < 10; i++){
+
+      userChoice = prompt("Please enter your choice: (r) for Rock, (p) for Paper, (s) for Scissors. What did you choose?");
+      cpuChoice = rpsChoices[(Math.floor(Math.random()*3))];  
+      console.log("I chose " + cpuChoice + "User chose " + userChoice);
+      
+      if (cpuChoice === "rock")
+        {
+          if(userChoice == "r")
+          {
+            alert("I chose " + cpuChoice + " also. It's a tie.")
+          }
+          else if (userChoice == "p")
+          {
+            alert("I chose " + cpuChoice + ". Congrats you win this round!")
+            score++;
+          }
+          else if (userChoice == "s")
+          {
+            alert("I chose " + cpuChoice + ". Sorry I win this round!")
+          }
+        }
+      
+        if (cpuChoice === "paper")
+        {
+          if(userChoice == "p")
+          {
+            alert("I chose " + cpuChoice + " also. It's a tie.")
+          }
+          else if (userChoice == "s")
+          {
+            alert("I chose " + cpuChoice + ". Congrats you win this round!")
+            score++;
+          }
+          else if (userChoice == "r")
+          {
+            alert("I chose " + cpuChoice + ". Sorry I win this round!")
+          }
+        }
+
+        if (cpuChoice === "scissors")
+        {
+          if(userChoice == "s")
+          {
+            alert("I chose " + cpuChoice + " also. It's a tie.")
+          }
+          else if (userChoice == "r")
+          {
+            alert("I chose " + cpuChoice + ". Congrats you win this round!")
+            score++;
+          }
+          else if (userChoice == "p")
+          {
+            alert("I chose " + cpuChoice + ". Sorry I win this round!")
+          }
+        }
+
+      }
+    
+      alert("Game Over! You got " + score + " out of 10! Refresh to Play Again!" )
+    
+    </script>
+</body>
+
+</html>
