@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Welcome to Rock, Paper, Scissors!</h1>
-    <h3>There is a total of 10 rounds per game.</h3>
+    <h3>There is a total of 10 rounds per game. <br> Refresh to Play!</h3>
     <img src="Images/9-RPS-example.png">
     
 
@@ -25,54 +25,72 @@
       cpuChoice = rpsChoices[(Math.floor(Math.random()*3))];  
       console.log("I chose " + cpuChoice + "User chose " + userChoice);
       
-      if (cpuChoice === "rock")
+      if (!userChoice)
+      {
+            alert("You hit Cancel. Sorry to see you go so soon.");
+            i = 10;
+      }  
+
+      else if (cpuChoice === "rock")
         {
-          if(userChoice == "r")
+          if(userChoice.charAt(0) == "r" || userChoice.charAt(0) == "R" )
           {
             alert("I chose " + cpuChoice + " also. It's a tie.")
           }
-          else if (userChoice == "p")
+          else if (userChoice.charAt(0) == "p" || userChoice.charAt(0) == "P")
           {
             alert("I chose " + cpuChoice + ". Congrats you win this round!")
             score++;
           }
-          else if (userChoice == "s")
+          else if (userChoice.charAt(0) == "s" || userChoice.charAt(0) == "S")
           {
             alert("I chose " + cpuChoice + ". Sorry I win this round!")
+          }
+          else 
+          {
+            alert("Invalid entry. Sorry you lose this round.");
           }
         }
       
-        if (cpuChoice === "paper")
+        else if (cpuChoice === "paper")
         {
-          if(userChoice == "p")
+          if(userChoice.charAt(0) == "p" || userChoice.charAt(0) == "P")
           {
             alert("I chose " + cpuChoice + " also. It's a tie.")
           }
-          else if (userChoice == "s")
+          else if (userChoice.charAt(0) == "s" || userChoice.charAt(0) == "S")
           {
             alert("I chose " + cpuChoice + ". Congrats you win this round!")
             score++;
           }
-          else if (userChoice == "r")
+          else if (userChoice.charAt(0) == "r" || userChoice.charAt(0) == "R" )
           {
             alert("I chose " + cpuChoice + ". Sorry I win this round!")
+          }
+          else 
+          {
+            alert("Invalid entry. Sorry you lose this round.");
           }
         }
 
-        if (cpuChoice === "scissors")
+        else if (cpuChoice === "scissors")
         {
-          if(userChoice == "s")
+          if(userChoice.charAt(0) == "s" || userChoice.charAt(0) == "S")
           {
             alert("I chose " + cpuChoice + " also. It's a tie.")
           }
-          else if (userChoice == "r")
+          else if (userChoice.charAt(0) == "r" || userChoice.charAt(0) == "R" )
           {
             alert("I chose " + cpuChoice + ". Congrats you win this round!")
             score++;
           }
-          else if (userChoice == "p")
+          else if (userChoice.charAt(0) == "p" || userChoice.charAt(0) == "P")
           {
             alert("I chose " + cpuChoice + ". Sorry I win this round!")
+          }
+          else 
+          {
+            alert("Invalid entry. Sorry you lose this round.");
           }
         }
 
